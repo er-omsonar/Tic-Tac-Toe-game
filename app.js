@@ -26,13 +26,18 @@ boxes.forEach( (box)=> {
   box.addEventListener("click",()=>{
     if(turnO){
       box.innerText = "O";
+       box.classList.add("clicked", "o", "o-color");
       turnO = false;
     }
     else{
       box.innerText = "X";
+       box.classList.add("clicked", "x", "x-color");
       turnO = true;
     }
     box.disabled = true;
+        setTimeout(() => {
+      box.classList.remove("clicked", "o", "x");
+    }, 200);
     checkWinnwer();
     
     

@@ -3,19 +3,20 @@
   padding: 0;
 }
 
-body{
-  background-color: #548687;
+body {
+  background-color: #ffe6f0; /* soft pastel pink background */
   text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.container{
+.container {
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.game{
+.game {
   height: 60vmin;
   width: 60vmin;
   display: flex;
@@ -25,41 +26,43 @@ body{
   gap: 1.5vmin;
 }
 
-.box{
+.box {
   height: 18vmin;
   width: 18vmin;
   border-radius: 1rem;
   border: none;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  box-shadow: 0 0 1rem rgba(255, 105, 180, 0.3);
   font-size: 8vmin;
-  color: #b0413e;
-  background-color: #ffffc7;
+  color: #ff4d88;
+  background-color: #fff0f5; /* lavender-pink */
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-#reset-btn{
+#reset-btn,
+#new-btn {
   padding: 1rem;
   font-size: 1.25rem;
-  background-color: #191913;
+  background-color: #ff80ab; /* bright pink */
   color: #fff;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
+  box-shadow: 0 0 1rem rgba(255, 105, 180, 0.5);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-#new-btn{
-  padding: 1rem;
-  font-size: 1.25rem;
-  background-color: #191913;
-  color: #fff;
-  border-radius: 1rem;
-  border: none;
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #ff4d88; /* darker pink on hover */
+  transform: scale(1.05);
 }
 
-#msg{
-  color: #ffffc7;
+#msg {
+  color: #ff4d88;
   font-size: 5vmin;
-
 }
-.msg-container{
+
+.msg-container {
   height: 100vmin;
   display: flex;
   justify-content: center;
@@ -68,6 +71,29 @@ body{
   gap: 4rem;
 }
 
-.hide{
+.hide {
   display: none;
+}
+
+.o-color {
+  color: #ff99cc; /* light pink for O */
+  font-weight: bold;
+}
+.x-color {
+  color: #ff4d88; /* darker pink for X */
+  font-weight: bold;
+}
+
+/* Click animation */
+.box.clicked {
+  transform: scale(1.2);
+  background-color: #ffd6e0; /* soft pink highlight */
+}
+
+.box.clicked.o {
+  background-color: #ff99cc; /* pink for O */
+}
+
+.box.clicked.x {
+  background-color: #ff4d88; /* dark pink for X */
 }
