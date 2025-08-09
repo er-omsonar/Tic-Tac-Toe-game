@@ -1,6 +1,7 @@
 # Tic-Tac-Toe-game
 🎮 A simple and interactive Tic Tac Toe game built with HTML, CSS, and JavaScript. Play against a friend  with a clean and responsive UI.
 
+-🎮live link - https://er-omsonar.github.io/Tic-Tac-Toe-game/
 
 # 🎯 Tic Tac Toe Game
 
